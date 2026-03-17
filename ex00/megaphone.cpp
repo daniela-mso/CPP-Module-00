@@ -1,10 +1,17 @@
-// need to take in user input 
-// all lower case letters need to become upper case
-// if no input is given  then output prepared message 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danielad <danielad@student.42lausanne.c    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/17 18:29:41 by danielad          #+#    #+#             */
+/*   Updated: 2026/03/17 18:29:56 by danielad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-//using namespace std;
 
 int	main(int argc, char *argv[])
 {
