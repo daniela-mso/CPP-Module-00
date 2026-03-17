@@ -8,19 +8,26 @@
 
 int	main(int argc, char *argv[])
 {
-	(void)argc;
-	std::string phrase;
-	//std::cout << "write something";
-	int x = 1;
-	phrase = argv[x];
-	//std::cin >> phrase;
-	int i =0;
-	while (phrase[i] != '\0')
+	int	x;
+	
+	if (argc < 2)
 	{
-		if (phrase[i] >= 97 && phrase[i] <=122)
-			phrase[i] -= 32;
-		i++;
+		std::cout << "* LOUD AND UNBERABLE FEEDBACK NOISE *";
+		return (0);
 	}
-	std::cout << phrase;
+	x = 1;
+	while (argv[x] != NULL)
+	{
+		int i =0;
+		while(argv[x][i] != '\0')
+		{
+			if (argv[x][i] >= 97 && argv[x][i] <=122)
+				argv[x][i] -= 32;
+			std::cout << argv[x][i];
+			i++;
+		}
+		std::cout << " ";
+		x++;
+	}
 	return (0);
 }
