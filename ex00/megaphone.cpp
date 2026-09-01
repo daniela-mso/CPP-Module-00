@@ -6,35 +6,40 @@
 /*   By: danielad <danielad@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 18:29:41 by danielad          #+#    #+#             */
-/*   Updated: 2026/03/17 18:29:56 by danielad         ###   ########.fr       */
+/*   Updated: 2026/08/25 16:23:08 by danielad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-int	main(int argc, char *argv[])
+int main(int ac, char **av)
 {
-	int	x;
-	
-	if (argc < 2)
+	int		i;
+	int		x;
+	bool	first;
+
+	if (ac < 2)
 	{
-		std::cout << "* LOUD AND UNBERABLE FEEDBACK NOISE *";
+		std::cout << "* LOUD AND UNBBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
 	}
-	x = 1;
-	while (argv[x] != NULL)
+
+	first = false;
+	i = 1;
+	while (av[i] != NULL)
 	{
-		int i =0;
-		while(argv[x][i] != '\0')
+		if (first)
+			std::cout << " ";
+		x = 0;
+		while (av[i][x] != '\0')
 		{
-			if (argv[x][i] >= 97 && argv[x][i] <=122)
-				argv[x][i] -= 32;
-			std::cout << argv[x][i];
-			i++;
+			std::cout << (char)toupper(av[i][x]);
+			x++;
 		}
-		std::cout << " ";
-		x++;
+		first = true;
+		i++;
+
 	}
 	return (0);
 }
