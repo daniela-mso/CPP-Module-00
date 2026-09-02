@@ -25,8 +25,13 @@ int Account::getNbWithdrawals( void )
 }
 
 
+
+
+
+
 void	Account::displayAccountsInfos( void )
 {
+	
 	
 }
 

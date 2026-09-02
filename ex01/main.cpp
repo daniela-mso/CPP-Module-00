@@ -19,8 +19,10 @@ void	get_command(PhoneBook awsome_phonebook)
 {
 	std::string command;
 
-	while (std::getline(std::cin, command))
+	while (true)
 	{
+		if (!std::getline(std::cin, command))
+			return;
 		if (command == "ADD" || command == "add")
 			awsome_phonebook.addContact();
 		else if (command == "SEARCH" || command == "search")

@@ -29,7 +29,8 @@ std::string	get_data(std::string atribute)
 	while (input.empty())
 	{
 		std::cout << "Enter " << atribute << ":" << std::endl;
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			break;
 		if (!input.empty())
 			break;
 	}
@@ -128,7 +129,8 @@ void PhoneBook::searchContact(void)
 
 	while(1)
 	{
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return;
 		if ((this->_has_contacts == true) && (input.length() == 1) && (input[0] >= '1' && input[0] <= '8'))
 		{
 			int	index = input[0] - 49;
